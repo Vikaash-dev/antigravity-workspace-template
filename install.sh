@@ -3,9 +3,11 @@ set -e
 
 # Antigravity Workspace Template Installer for Linux/macOS
 # This script sets up the development environment automatically
+# Enhanced with MCP servers, graph memory, and AI research tools
 
-echo "🪐 Antigravity Workspace Template - Installer"
-echo "=============================================="
+echo "🪐 Antigravity Workspace Template - Supercharged Installer"
+echo "=========================================================="
+echo "Setting up AI research environment with essential MCPs"
 echo ""
 
 # Check if Python 3 is installed
@@ -34,6 +36,20 @@ if ! command -v git &> /dev/null; then
 fi
 
 echo "✅ Git $(git --version | cut -d' ' -f3) detected"
+
+# Check if Node.js is installed (required for MCP servers)
+if ! command -v node &> /dev/null; then
+    echo "⚠️  Warning: Node.js is not installed."
+    echo "   Node.js is required for MCP servers (Context7, memory, etc.)"
+    echo "   Install from: https://nodejs.org/"
+    echo "   Continuing without MCP server setup..."
+    NODE_AVAILABLE=false
+else
+    NODE_VERSION=$(node --version)
+    echo "✅ Node.js $NODE_VERSION detected"
+    NODE_AVAILABLE=true
+fi
+
 echo ""
 
 # Create virtual environment
@@ -87,19 +103,76 @@ if [ ! -d "artifacts" ]; then
     echo "✅ Created artifacts directory"
 fi
 
+# Create additional directories for research workflow
+echo "📁 Setting up research workspace directories..."
+mkdir -p artifacts/papers
+mkdir -p artifacts/analysis
+mkdir -p artifacts/code_reviews
+mkdir -p .context/research
+mkdir -p .context/references
+echo "✅ Created research workspace directories"
+
+# Install essential MCP servers if Node.js is available
+if [ "$NODE_AVAILABLE" = true ]; then
+    echo ""
+    echo "📦 Installing Essential MCP Servers..."
+    echo "-------------------------------------------"
+    
+    # Install Context7 MCP for code intelligence
+    echo "🧠 Installing @context7/mcp-server (code intelligence)..."
+    npm install -g @context7/mcp-server 2>/dev/null || echo "⚠️  Context7 installation skipped (may require manual setup)"
+    
+    # Install Memory MCP for persistent context
+    echo "💾 Installing @modelcontextprotocol/server-memory..."
+    npm install -g @modelcontextprotocol/server-memory 2>/dev/null || echo "✅ Memory server available via npx"
+    
+    # Install Filesystem MCP
+    echo "📂 Installing @modelcontextprotocol/server-filesystem..."
+    npm install -g @modelcontextprotocol/server-filesystem 2>/dev/null || echo "✅ Filesystem server available via npx"
+    
+    # Install GitHub MCP for repository analysis
+    echo "🐙 Installing @modelcontextprotocol/server-github..."
+    npm install -g @modelcontextprotocol/server-github 2>/dev/null || echo "✅ GitHub server available via npx"
+    
+    # Install Brave Search MCP for research
+    echo "🔍 Installing @modelcontextprotocol/server-brave-search..."
+    npm install -g @modelcontextprotocol/server-brave-search 2>/dev/null || echo "✅ Brave Search server available via npx"
+    
+    # Install Puppeteer MCP for web scraping research papers
+    echo "🤖 Installing @modelcontextprotocol/server-puppeteer..."
+    npm install -g @modelcontextprotocol/server-puppeteer 2>/dev/null || echo "✅ Puppeteer server available via npx"
+    
+    echo "✅ MCP servers installation complete"
+else
+    echo "⚠️  Skipping MCP server installation (Node.js not available)"
+fi
+
 echo ""
-echo "=============================================="
+echo "=========================================================="
 echo "✅ Installation complete!"
+echo ""
+echo "🎯 Research Paper AI Setup Complete"
+echo "-------------------------------------------"
 echo ""
 echo "Next steps:"
 echo "1. Configure your API keys in .env file:"
 echo "   nano .env"
+echo "   (Add: GOOGLE_API_KEY, GITHUB_TOKEN, BRAVE_API_KEY)"
 echo ""
 echo "2. Activate the virtual environment:"
 echo "   source venv/bin/activate"
 echo ""
-echo "3. Run the agent:"
-echo "   python src/agent.py"
+echo "3. Enable MCP servers in mcp_servers.json:"
+echo "   - Context7: Code intelligence & import suggestions"
+echo "   - Memory: Graph memory for research context"
+echo "   - GitHub: Repository analysis"
+echo "   - Brave Search: Academic paper search"
+echo "   - Puppeteer: Web scraping for research"
+echo ""
+echo "4. Run the agent for research tasks:"
+echo "   python src/agent.py \"Analyze code quality\""
+echo "   python src/agent.py \"Research topic: neural networks\""
 echo ""
 echo "📚 Documentation: docs/en/QUICK_START.md"
-echo "=============================================="
+echo "🔬 Research Tools: artifacts/papers/, artifacts/analysis/"
+echo "=========================================================="

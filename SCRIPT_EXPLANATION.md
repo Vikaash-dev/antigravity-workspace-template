@@ -4,6 +4,8 @@
 
 This repository contains the **Antigravity Workspace Template** - a production-grade starter kit for building autonomous AI agents using Google Gemini (or OpenAI-compatible backends). The project provides a complete cognitive architecture for AI agents with infinite memory, auto-discovery of tools, and multi-agent coordination.
 
+**✨ NEW: Enhanced with Research Paper AI capabilities** - This workspace is now supercharged with essential MCP servers (Context7, Graph Memory, GitHub, Brave Search) and specialized research tools for academic paper writing, code analysis, and literature review. See [RESEARCH_SETUP_GUIDE.md](RESEARCH_SETUP_GUIDE.md) for details.
+
 ---
 
 ## Main Scripts
@@ -12,14 +14,16 @@ This repository contains the **Antigravity Workspace Template** - a production-g
 
 **Location:** `/install.sh`
 
-**Purpose:** Automates the setup of the development environment for the Antigravity workspace.
+**Purpose:** Automates the setup of the development environment for the Antigravity workspace. **Now enhanced with essential MCP servers and research tools.**
 
 **What it does:**
-- ✅ **Checks prerequisites**: Verifies Python 3.8+ and Git are installed
+- ✅ **Checks prerequisites**: Verifies Python 3.8+, Git, and Node.js are installed
 - ✅ **Creates virtual environment**: Sets up an isolated Python environment (`venv/`)
 - ✅ **Installs dependencies**: Installs all required Python packages from `requirements.txt`
 - ✅ **Configures environment**: Creates a `.env` file with API key placeholders
 - ✅ **Creates directories**: Sets up the `artifacts/` directory for agent outputs
+- ✨ **NEW: Installs MCP servers**: Automatically installs Context7, Memory, GitHub, Brave Search, Puppeteer, and Filesystem MCPs
+- ✨ **NEW: Creates research directories**: Sets up `artifacts/papers/`, `artifacts/analysis/`, `.context/research/`, etc.
 
 **Usage:**
 ```bash
@@ -27,7 +31,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-**Output:** After completion, you'll have a fully configured development environment ready to run the AI agent.
+**Output:** After completion, you'll have a fully configured development environment with essential MCP servers ready for AI-assisted research.
 
 ---
 
@@ -109,6 +113,24 @@ GeminiAgent
 - `test_swarm.py` - Tests multi-agent coordination
 - `test_memory.py` - Tests memory management
 
+### 6. Research Tools (`src/tools/research_tools.py`) ✨ NEW
+
+**Purpose:** Specialized tools for academic research and paper writing:
+- `analyze_paper_structure()` - Analyzes research paper completeness
+- `cross_analyze_approaches()` - Compares different research approaches
+- `negative_analysis()` - Critical evaluation and counterargument analysis
+- `code_quality_assessment()` - Evaluates research implementation quality
+- `generate_paper_outline()` - Creates structured academic paper outlines
+- `compare_code_implementations()` - Side-by-side code comparison
+
+### 7. Planner Tool (`src/tools/planner_tool.py`) ✨ NEW
+
+**Purpose:** Research workflow and project management:
+- `create_research_plan()` - Creates timeline with 5 phases (Literature Review → Writing)
+- `update_task_status()` - Tracks progress on research tasks
+- `get_plan_progress()` - Calculates completion percentages
+- `generate_daily_tasks()` - Recommends daily priorities
+
 ---
 
 ## How It All Works Together
@@ -176,9 +198,50 @@ User → agent.py → src/agent.py → GeminiAgent
 
 ## Summary
 
-The scripts in this repository form a **complete AI agent framework**:
-- `install.sh` sets up your environment
+The scripts in this repository form a **complete AI agent framework** enhanced for research:
+- `install.sh` sets up your environment **with essential MCP servers**
 - `agent.py` provides the entry point
 - `src/agent.py` implements the intelligent agent with memory, tools, and multi-agent capabilities
+- **NEW:** `research_tools.py` provides academic research and paper writing tools
+- **NEW:** `planner_tool.py` manages research timelines and task planning
 
-The goal is to make building production-grade AI agents as simple as **Clone → Configure → Prompt**.
+The goal is to make building production-grade AI agents as simple as **Clone → Configure → Prompt**, with specialized support for **academic research and paper writing workflows**.
+
+---
+
+## 🔬 Research Paper AI Features
+
+This workspace is now optimized for **AI-assisted research paper writing**:
+
+### Essential MCP Servers (Auto-installed)
+- **Context7**: Code intelligence for imports and file reviews
+- **Memory**: Graph-based memory for research context
+- **GitHub**: Repository analysis and code mining
+- **Brave Search**: Academic paper discovery
+- **Puppeteer**: Web scraping for research papers
+- **Filesystem**: Organized artifact storage
+
+### Research Workflow Support
+1. **Literature Review**: Search, scrape, and organize academic papers
+2. **Code Analysis**: Quality assessment and implementation comparison
+3. **Cross-Analysis**: Compare research approaches systematically
+4. **Negative Analysis**: Critical evaluation and weakness identification
+5. **Paper Writing**: Structured outlines and progress tracking
+6. **Planning**: 5-phase research timeline with milestone tracking
+
+### Quick Start for Research
+```bash
+# 1. Run enhanced installer
+./install.sh
+
+# 2. Configure API keys in .env
+nano .env  # Add GOOGLE_API_KEY, GITHUB_TOKEN, BRAVE_API_KEY
+
+# 3. Create research plan
+python src/agent.py "Create research plan for: [your topic], deadline: 2024-12-31"
+
+# 4. Start researching
+python src/agent.py "Search papers on neural architecture search"
+```
+
+📚 **See [RESEARCH_SETUP_GUIDE.md](RESEARCH_SETUP_GUIDE.md) for complete documentation.**
