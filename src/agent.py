@@ -1,3 +1,129 @@
+"""
+============================================================================
+Antigravity Workspace Template - Main Agent Implementation
+============================================================================
+
+PURPOSE:
+    Production-grade autonomous AI agent implementation using Google Gemini
+    with the Think-Act-Reflect cognitive pattern. This is the core engine
+    that powers the agent's autonomous behavior.
+
+ARCHITECTURE:
+    The GeminiAgent class implements a complete autonomous agent with:
+    
+    1. THINK Phase:
+       - Analyzes incoming tasks
+       - Loads contextual knowledge from .context/ directory
+       - Identifies required tools
+       - Formulates execution plan
+    
+    2. ACT Phase:
+       - Executes tasks using available tools
+       - Calls Gemini API or OpenAI-compatible backend
+       - Parses and executes tool invocation requests
+       - Processes tool observations
+       - Generates final responses
+    
+    3. REFLECT Phase:
+       - Reviews past interactions
+       - Learns from outcomes
+       - Improves future performance
+
+KEY FEATURES:
+    - 🧠 Infinite Memory: Recursive summarization compresses context
+    - 🛠️ Zero-Config Tools: Auto-discovers tools from src/tools/
+    - 📚 Auto Context: Auto-loads knowledge from .context/
+    - 🔌 MCP Integration: Connects to external tool servers
+    - 🤖 Multi-Backend: Supports Gemini, OpenAI, Ollama, etc.
+    - 📦 Artifact-First: Saves all outputs to artifacts/
+
+TOOL SYSTEM:
+    Local Tools:
+        - Drop Python files into src/tools/
+        - Public functions automatically become available tools
+        - No registration required - zero configuration
+    
+    MCP Tools:
+        - Configure external servers in mcp_servers.json
+        - Tools from GitHub, databases, filesystems
+        - Transparently integrated with local tools
+
+MEMORY MANAGEMENT:
+    - Conversation history stored in JSON format
+    - Automatic summarization when context grows too large
+    - Preserves decisions, intents, and outcomes
+    - Infinite context through recursive compression
+
+BACKEND SUPPORT:
+    - Google Gemini 2.0 Flash (primary)
+    - OpenAI-compatible APIs (Ollama, local models)
+    - Dummy client for testing without API calls
+
+USAGE:
+    # Direct execution
+    python src/agent.py "Your task here"
+    
+    # With environment variable
+    export AGENT_TASK="Your task"
+    python src/agent.py
+    
+    # From root directory
+    python agent.py "Your task"
+
+CONFIGURATION:
+    Environment variables (set in .env file):
+    - GOOGLE_API_KEY: Google Gemini API key
+    - OPENAI_BASE_URL: OpenAI-compatible endpoint (optional)
+    - OPENAI_API_KEY: OpenAI API key (optional)
+    - OPENAI_MODEL: Model name for OpenAI backend
+    - GEMINI_MODEL_NAME: Gemini model (default: gemini-2.0-flash-exp)
+    - MCP_ENABLED: Enable MCP integration (true/false)
+    - AGENT_NAME: Custom agent name
+    
+    Sandbox settings:
+    - SANDBOX_TYPE: local, docker, or e2b
+    - SANDBOX_TIMEOUT_SEC: Execution timeout
+    - SANDBOX_MAX_OUTPUT_KB: Output size limit
+
+DIRECTORY STRUCTURE:
+    src/
+    ├── agent.py           ← This file (main agent logic)
+    ├── memory.py          ← Memory management
+    ├── mcp_client.py      ← MCP integration
+    ├── swarm.py           ← Multi-agent orchestration
+    ├── tools/             ← Your custom tools (auto-loaded)
+    └── agents/            ← Specialist agents
+    
+    .context/              ← Knowledge base (auto-injected)
+    artifacts/             ← Agent outputs and logs
+
+EXAMPLES:
+    1. Create a custom tool:
+       ```python
+       # src/tools/my_tool.py
+       def analyze_sentiment(text: str) -> str:
+           \"\"\"Analyzes the sentiment of given text.\"\"\"
+           return "positive" if len(text) > 10 else "neutral"
+       ```
+       Restart agent - tool is automatically available!
+    
+    2. Add domain knowledge:
+       Create .context/coding_standards.md with your conventions.
+       Agent automatically injects it into system prompt!
+    
+    3. Connect to GitHub:
+       Configure MCP server in mcp_servers.json.
+       Agent can now use GitHub APIs as tools!
+
+SEE ALSO:
+    - docs/en/SCRIPTS.md - Detailed script documentation
+    - docs/en/PHILOSOPHY.md - Architecture and design principles
+    - docs/en/MCP_INTEGRATION.md - External tool integration
+    - README.md - Project overview
+
+============================================================================
+"""
+
 import json
 import time
 import os

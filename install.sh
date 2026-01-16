@@ -1,8 +1,31 @@
 #!/usr/bin/env bash
 set -e
 
+# ============================================================================
 # Antigravity Workspace Template Installer for Linux/macOS
-# This script sets up the development environment automatically
+# ============================================================================
+#
+# PURPOSE:
+#   Automated setup script that prepares your development environment for
+#   running autonomous AI agents with Google Gemini integration.
+#
+# WHAT THIS SCRIPT DOES:
+#   1. Validates system requirements (Python 3.8+, Git)
+#   2. Creates a Python virtual environment
+#   3. Installs all required dependencies from requirements.txt
+#   4. Sets up configuration files (.env, artifacts/ directory)
+#   5. Provides next steps for running the agent
+#
+# USAGE:
+#   chmod +x install.sh
+#   ./install.sh
+#
+# AFTER INSTALLATION:
+#   1. Configure API keys in .env file
+#   2. Activate virtual environment: source venv/bin/activate
+#   3. Run the agent: python src/agent.py
+#
+# ============================================================================
 
 echo "🪐 Antigravity Workspace Template - Installer"
 echo "=============================================="
