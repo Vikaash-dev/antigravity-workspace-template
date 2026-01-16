@@ -281,7 +281,7 @@ class AIAgentOrchestrator:
         
         # Vibe coding tasks
         if any(word in task_lower for word in ["vibe", "context", "intelligent"]):
-            recommendations["mcp_servers"].append(self.available["context7"])
+            recommendations["mcp_servers"].append(self.registry.available["context7"])
             recommendations["ai_coding_tools"].append(AI_CODING_TOOLS["tabby"])
         
         return recommendations

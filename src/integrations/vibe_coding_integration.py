@@ -71,7 +71,7 @@ class VibeCodingEngine:
                         "relevance_score": score,
                         "content": content[:500]  # Preview
                     })
-            except:
+            except (IOError, UnicodeDecodeError):
                 continue
         
         # Sort by relevance
@@ -219,7 +219,7 @@ Format as JSON."""
         
         try:
             return json.loads(response.get("content", "{}"))
-        except:
+        except (json.JSONDecodeError, ValueError):
             return {"issues": [], "quality_score": 7}
 
 

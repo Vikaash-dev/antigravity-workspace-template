@@ -72,7 +72,7 @@ Format as JSON with keys: main_code, test_code, readme, requirements"""
         
         try:
             result = json.loads(response.get("content", "{}"))
-        except:
+        except (json.JSONDecodeError, ValueError):
             result = {
                 "main_code": response.get("content", ""),
                 "test_code": "",
@@ -130,7 +130,7 @@ Format as JSON with file paths as keys and content as values."""
         
         try:
             result = json.loads(response.get("content", "{}"))
-        except:
+        except (json.JSONDecodeError, ValueError):
             result = {"App.jsx": response.get("content", "")}
         
         return result
@@ -180,7 +180,7 @@ Format as JSON with file paths as keys and content as values."""
         
         try:
             result = json.loads(response.get("content", "{}"))
-        except:
+        except (json.JSONDecodeError, ValueError):
             result = {"main.py": response.get("content", "")}
         
         return result
