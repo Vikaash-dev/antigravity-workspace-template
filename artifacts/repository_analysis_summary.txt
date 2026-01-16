@@ -1,0 +1,87 @@
+================================================================================
+REPOSITORY ANALYSIS REPORT
+================================================================================
+
+SUMMARY
+--------------------------------------------------------------------------------
+total_files: 49
+total_lines_of_code: 8375
+total_functions: 245
+total_classes: 67
+average_complexity: 603.8979591836735
+
+
+FUNCTIONAL BLOCKS
+--------------------------------------------------------------------------------
+
+LITERATURE_SEARCH
+  Description: Search academic papers, scrape ArXiv, Google Scholar
+  Files: 1
+  Total LOC: 130
+  Similar Repos: DATAGEN/src/tools/arxiv_tool.py, STORM/literature_search.py
+
+DATA_ANALYSIS
+  Description: Statistical analysis, data processing, visualization
+  Files: 2
+  Total LOC: 478
+  Similar Repos: DATAGEN/src/agents/analysis_agent.py
+
+CODE_GENERATION
+  Description: Generate code implementations, run experiments
+  Files: 5
+  Total LOC: 547
+  Similar Repos: DATAGEN/src/agents/code_agent.py, Paper2Code
+
+MULTI_AGENT_COORDINATION
+  Description: Agent orchestration, message passing, workflow management
+  Files: 1
+  Total LOC: 503
+  Similar Repos: DATAGEN/src/core/coordinator.py, Aetherius/multi_agent.py
+
+LONG_TERM_MEMORY
+  Description: Persistent memory, context retention, knowledge graphs
+  Files: 2
+  Total LOC: 183
+  Similar Repos: Aetherius/memory_system.py, DATAGEN/src/core/memory.py
+
+REPORT_WRITING
+  Description: Academic paper generation, formatting, citations
+  Files: 3
+  Total LOC: 919
+  Similar Repos: DATAGEN/src/agents/writer_agent.py, STORM/paper_generator.py
+
+SELF_REFLECTION
+  Description: Agent self-assessment, iterative improvement
+  Files: 2
+  Total LOC: 436
+  Similar Repos: current/src/self_reflection.py
+
+TOOL_INTEGRATION
+  Description: External tool integration (APIs, MCPs, services)
+  Files: 15
+  Total LOC: 2501
+  Similar Repos: current/src/integrations/, DATAGEN/src/tools/
+
+
+INTEGRATION OPPORTUNITIES
+--------------------------------------------------------------------------------
+
+LITERATURE_SEARCH
+  Status: under_developed
+  Priority: medium
+  Action: Enhance Search academic papers, scrape ArXiv, Google Scholar with additional patterns
+
+HYPOTHESIS_GENERATION
+  Status: missing
+  Priority: high
+  Action: Implement Generate research hypotheses from literature based on patterns from DATAGEN/src/agents/hypothesis_agent.py
+
+MULTI_AGENT_COORDINATION
+  Status: under_developed
+  Priority: medium
+  Action: Enhance Agent orchestration, message passing, workflow management with additional patterns
+
+RESEARCH_ORCHESTRATION
+  Status: missing
+  Priority: high
+  Action: Implement End-to-end research pipeline management based on patterns from DATAGEN/src/system.py, STORM/orchestrator.py
