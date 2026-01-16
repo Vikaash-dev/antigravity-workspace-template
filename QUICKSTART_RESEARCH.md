@@ -1,17 +1,27 @@
 # 🚀 Quick Start - Research Paper AI
 
-## Installation (One Command)
+## One-Command Auto-Setup
 
+### Windows
+```cmd
+install.bat
+```
+
+### Linux/macOS
 ```bash
+chmod +x install.sh
 ./install.sh
 ```
 
-This installs:
-- ✅ Python dependencies
+This **automatically installs and configures globally**:
+- ✅ Python environment & dependencies
 - ✅ Context7 (code intelligence)
 - ✅ Memory (graph memory)
-- ✅ GitHub, Brave Search, Puppeteer MCPs
+- ✅ GitHub, Tavily, Google Search MCPs
+- ✅ Task manager with parallel execution
+- ✅ Auto-import AI tasks from MCP
 - ✅ Research workspace directories
+- ✅ Global .env configuration
 
 ## Configuration (2 Minutes)
 
@@ -19,8 +29,10 @@ Edit `.env`:
 ```bash
 GOOGLE_API_KEY=your_gemini_key
 GITHUB_TOKEN=ghp_your_token
-BRAVE_API_KEY=your_brave_key
+TAVILY_API_KEY=tvly_your_key
+GOOGLE_SEARCH_API_KEY=your_search_key
 MCP_ENABLED=true
+AUTO_IMPORT_MCP_TASKS=true
 ```
 
 ## Usage Examples
@@ -67,6 +79,13 @@ python src/agent.py "What should I work on today?"
 
 ## Essential Tools
 
+### Task Manager (`task_manager.py`)
+- `add_task()` - Add tasks with dependencies
+- `execute_parallel()` - Run tasks in parallel (up to 4 workers)
+- `get_execution_summary()` - Track progress
+- `import_ai_tasks_from_mcp()` - Auto-import from MCP servers
+- `schedule_research_tasks()` - Pre-configured research workflows
+
 ### Research Tools (`research_tools.py`)
 - `analyze_paper_structure()` - Check paper completeness
 - `cross_analyze_approaches()` - Compare approaches
@@ -88,7 +107,9 @@ python src/agent.py "What should I work on today?"
 | Context7 | Code intelligence | Imports, reviews, file analysis |
 | Memory | Graph memory | Context, references, history |
 | GitHub | Repo analysis | Code mining, issue tracking |
-| Brave Search | Academic search | Paper discovery, literature review |
+| Tavily | AI-powered search | Paper discovery, research |
+| Google Search | Web search | Comprehensive research, validation |
+| Tasks | Task orchestration | Parallel execution, workflows |
 | Puppeteer | Web scraping | ArXiv, Scholar, metadata |
 | Filesystem | File ops | Paper storage, artifacts |
 
@@ -100,6 +121,7 @@ artifacts/
   analysis/        # Analysis results
   code_reviews/    # Code reviews
   plans/           # Research plans
+  tasks/           # Task execution logs
 .context/
   research/        # Research notes
   references/      # Citations
@@ -124,6 +146,10 @@ artifacts/
 
 ## Tips
 
+✅ Run `install.bat` or `install.sh` for complete auto-setup
+✅ All MCPs and task manager configured automatically
+✅ Use parallel tasks for faster execution
+✅ Auto-import AI tasks from MCP servers enabled
 ✅ Start with `create_research_plan()` first
 ✅ Use Memory MCP to track everything
 ✅ Run `get_plan_progress()` weekly
