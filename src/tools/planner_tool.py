@@ -37,7 +37,12 @@ def create_research_plan(
         duration_weeks = 8
     
     if deadline:
-        target_date = datetime.fromisoformat(deadline)
+        try:
+            target_date = datetime.fromisoformat(deadline)
+        except ValueError:
+            return {
+                "error": f"Invalid deadline format: {deadline}. Use ISO format (YYYY-MM-DD)"
+            }
     else:
         target_date = today + timedelta(weeks=duration_weeks)
     
@@ -315,8 +320,13 @@ def calculate_expected_progress(plan: Dict[str, Any]) -> float:
     Returns:
         Expected completion percentage
     """
-    start_date = datetime.fromisoformat(plan["start_date"])
-    end_date = datetime.fromisoformat(plan["target_deadline"])
+    try:
+        start_date = datetime.fromisoformat(plan["start_date"])
+        end_date = datetime.fromisoformat(plan["target_deadline"])
+    except (ValueError, KeyError) as e:
+        # Invalid or missing dates in plan
+        return 0.0
+    
     today = datetime.now()
     
     if today < start_date:
@@ -327,7 +337,7 @@ def calculate_expected_progress(plan: Dict[str, Any]) -> float:
     total_duration = (end_date - start_date).days
     elapsed_duration = (today - start_date).days
     
-    expected_progress = (elapsed_duration / total_duration * 100) if total_duration > 0 else 0
+    expected_progress = (elapsed_duration / total_duration * 100) if total_duration > 0 else 0.0
     
     return expected_progress
 
@@ -433,11 +443,15 @@ def generate_daily_tasks(plan: Dict[str, Any]) -> List[Dict[str, Any]]:
     # Find current phase based on dates
     current_phase = None
     for phase in plan["phases"]:
-        phase_start = datetime.fromisoformat(phase["start"])
-        phase_end = datetime.fromisoformat(phase["end"])
-        if phase_start <= today <= phase_end:
-            current_phase = phase
-            break
+        try:
+            phase_start = datetime.fromisoformat(phase["start"])
+            phase_end = datetime.fromisoformat(phase["end"])
+            if phase_start <= today <= phase_end:
+                current_phase = phase
+                break
+        except (ValueError, KeyError):
+            # Skip phases with invalid dates
+            continue
     
     if not current_phase:
         return [{"message": "No active phase found. Check your plan timeline."}]

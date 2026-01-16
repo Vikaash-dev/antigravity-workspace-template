@@ -150,9 +150,9 @@ def code_quality_assessment(code: str, language: str = "python") -> Dict[str, An
         "total_lines": len(lines),
         "code_lines": len(non_empty_lines),
         "comment_lines": len(comment_lines),
-        "documentation_ratio": len(comment_lines) / max(len(non_empty_lines), 1),
-        "average_line_length": sum(len(line) for line in non_empty_lines) / max(len(non_empty_lines), 1),
-        "has_docstrings": '"""' in code or "'''" in code,
+        "documentation_ratio": len(comment_lines) / (len(non_empty_lines) or 1),
+        "average_line_length": sum(len(line) for line in non_empty_lines) / (len(non_empty_lines) or 1),
+        "has_docstrings": ('"""' in code or "'''" in code) and ("def " in code or "class " in code),
         "timestamp": datetime.now().isoformat()
     }
     
