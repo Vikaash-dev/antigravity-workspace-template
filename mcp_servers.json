@@ -1,66 +1,114 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "MCP Servers Configuration for Antigravity Agent",
+  "description": "MCP Servers Configuration for Antigravity Agent - Research Paper AI Edition",
   "servers": [
     {
-      "name": "filesystem",
-      "description": "Access to local filesystem operations",
+      "name": "context7",
+      "description": "Code intelligence for imports, file reviews, and code suggestions",
       "transport": "stdio",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"],
-      "enabled": false,
-      "env": {}
+      "args": ["-y", "@context7/mcp-server"],
+      "enabled": true,
+      "env": {},
+      "priority": "high",
+      "use_cases": ["code_review", "import_suggestions", "file_analysis"]
+    },
+    {
+      "name": "memory",
+      "description": "Graph memory for persistent research context and paper references",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "enabled": true,
+      "env": {},
+      "priority": "high",
+      "use_cases": ["research_context", "paper_references", "analysis_history"]
+    },
+    {
+      "name": "filesystem",
+      "description": "Access to local filesystem for research papers and code",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "enabled": true,
+      "env": {},
+      "priority": "high",
+      "use_cases": ["paper_storage", "code_access", "artifact_management"]
     },
     {
       "name": "github",
-      "description": "GitHub API integration for repository management",
+      "description": "GitHub API for code repository analysis and cross-referencing",
       "transport": "stdio",
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
-      "enabled": false,
+      "enabled": true,
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
-      }
+      },
+      "priority": "high",
+      "use_cases": ["repo_analysis", "code_mining", "issue_tracking"]
     },
     {
       "name": "postgres",
-      "description": "PostgreSQL database access",
+      "description": "PostgreSQL for research data storage and analysis",
       "transport": "stdio",
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-postgres"],
       "enabled": false,
       "env": {
         "POSTGRES_CONNECTION_STRING": "${DATABASE_URL}"
-      }
+      },
+      "priority": "low",
+      "use_cases": ["data_storage", "analysis_results", "citation_database"]
     },
     {
-      "name": "brave-search",
-      "description": "Web search using Brave Search API",
+      "name": "tavily-search",
+      "description": "Tavily AI-powered search for academic papers and research",
       "transport": "stdio",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-      "enabled": false,
+      "args": ["-y", "tavily-mcp"],
+      "enabled": true,
       "env": {
-        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
-      }
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}"
+      },
+      "priority": "high",
+      "use_cases": ["paper_search", "literature_review", "research_discovery", "ai_search"]
     },
     {
-      "name": "memory",
-      "description": "Persistent memory storage for the agent",
+      "name": "google-search",
+      "description": "Google Custom Search API for comprehensive research",
       "transport": "stdio",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"],
-      "enabled": false,
-      "env": {}
+      "args": ["-y", "@modelcontextprotocol/server-google-search"],
+      "enabled": true,
+      "env": {
+        "GOOGLE_SEARCH_API_KEY": "${GOOGLE_SEARCH_API_KEY}",
+        "GOOGLE_SEARCH_ENGINE_ID": "${GOOGLE_SEARCH_ENGINE_ID}"
+      },
+      "priority": "high",
+      "use_cases": ["web_search", "academic_search", "validation", "fact_checking"]
     },
     {
       "name": "puppeteer",
-      "description": "Browser automation and web scraping",
+      "description": "Web scraping for research papers (ArXiv, Google Scholar, etc.)",
       "transport": "stdio",
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
-      "enabled": false,
-      "env": {}
+      "enabled": true,
+      "env": {},
+      "priority": "medium",
+      "use_cases": ["paper_scraping", "citation_extraction", "metadata_collection"]
+    },
+    {
+      "name": "tasks",
+      "description": "Task management and AI task orchestration for Antigravity",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@antigravity/mcp-tasks"],
+      "enabled": true,
+      "env": {},
+      "priority": "high",
+      "use_cases": ["task_management", "parallel_execution", "workflow_orchestration", "ai_task_import"]
     },
     {
       "name": "slack",

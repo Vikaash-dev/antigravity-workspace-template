@@ -41,3 +41,10 @@ venv.bak/
 logs/
 data/
 .opencode/
+
+# Research artifacts (keep structure, ignore generated files)
+artifacts/plans/*.json
+artifacts/analysis/*
+artifacts/papers/*.pdf
+artifacts/papers/*.txt
+artifacts/code_reviews/*

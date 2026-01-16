@@ -1,6 +1,6 @@
 # 🪐 Google Antigravity Workspace Template
 
-**Production-grade starter kit for autonomous AI agents on Google Antigravity.**
+**The Ultimate Autonomous AI Research & Coding Platform** - From research papers to production code in minutes, with 100+ integrated AI tools and MCP servers.
 
 Language: [English](/docs/en/) | [中文（仓库主页）](README_CN.md) | [中文文档](/docs/zh/) | [Español](/docs/es/)
 
@@ -8,20 +8,41 @@ Language: [English](/docs/en/) | [中文（仓库主页）](README_CN.md) | [中
 ![Gemini](https://img.shields.io/badge/AI-Gemini_2.0_Flash-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-Event_Driven-purple)
 ![Memory](https://img.shields.io/badge/Context-Infinite-orange)
+![MCPs](https://img.shields.io/badge/MCP_Servers-100+-red)
+![AI_Tools](https://img.shields.io/badge/AI_Tools-Integrated-yellow)
+
+## 🚀 What's New
+
+- **🧠 Self-Reflection & Self-Review**: Agents that think about their thinking and iteratively improve
+- **🔬 Multi-Approach Research**: 7 research methodologies working in parallel, aggregated into superior papers
+- **💻 DeepCode Integration**: Paper2Code, Text2Web, Text2Backend (13,888⭐)
+- **⚡ Vibe Coding Engine**: Context-aware AI coding with Context7 (42,101⭐)
+- **📦 100+ MCP Servers**: Auto-tool selection from awesome-mcp-servers (78,962⭐)
+- **🤖 AI Agent Orchestrator**: Automatically selects best tools for any task
+- **🌐 Unified Antigravity API**: ONE KEY for Gemini, Claude Opus 4.5, OpenAI, and all MCPs
+- **🔄 Agent Context Protocol (ACP)**: Multi-agent coordination and autonomous workflows
 
 ## 🌟 Project Intent
 
-In a world full of AI IDEs, I want enterprise-grade architecture to be as simple as **Clone → Rename → Prompt**.
+In a world full of AI IDEs, I want enterprise-grade architecture to be as simple as **Clone → Configure → Prompt**.
 
-This project leverages IDE context awareness (via `.cursorrules` and `.antigravity/rules.md`) to pre-embed a complete **cognitive architecture** in the repo.
+This project is now the **most comprehensive autonomous research and coding platform**, combining:
+- Google Antigravity's cognitive architecture
+- 100+ integrated MCP servers
+- Paper2Code, Text2Web, Text2Backend capabilities  
+- Multi-methodology research with self-reflection
+- Vibe coding with semantic code search
+- Unified API management
 
-When you open this project, your IDE stops being just an editor—it becomes an **industry-savvy architect**.
+When you open this project, your IDE becomes an **industry-savvy architect** with access to **every AI tool imaginable**.
 
 **First principles:**
 
 - Minimize repetition: the repo should encode defaults so setup is nearly zero.
 - Make intent explicit: capture architecture, context, and workflows in files, not tribal knowledge.
 - Treat the IDE as a teammate: contextual rules turn the editor into a proactive architect, not a passive tool.
+- **Maximize capability**: Integrate best tools so you have superhuman abilities out of the box.
+- **Automate everything**: From research to production code, fully autonomous.
 
 ### Why do we need a thinking scaffold?
 
@@ -34,10 +55,13 @@ Every new project repeats the same boring setup:
 - "Should my code live in `src` or `app`?"
 - "How do I define utilities so Gemini recognizes them?"
 - "How do I help the AI remember prior context?"
+- **"How do I convert research papers to code?"**
+- **"How do I coordinate multiple AI agents?"**
+- **"Which MCP servers should I use?"**
 
-This repetition wastes creative energy. My ideal workflow is: **after a git clone, the IDE already knows what to do.**
+This repetition wastes creative energy. My ideal workflow is: **after a git clone, the IDE already knows what to do AND has every tool available.**
 
-So I built this project: **Antigravity Workspace Template**.
+So I built this project: **Antigravity Workspace Template** - now with **100+ integrated AI tools and MCP servers**.
 
 ## ⚡ Quick Start
 

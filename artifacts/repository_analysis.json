@@ -1,0 +1,1137 @@
+{
+  "summary": {
+    "total_files": 49,
+    "total_lines_of_code": 8375,
+    "total_functions": 245,
+    "total_classes": 67,
+    "average_complexity": 603.8979591836735
+  },
+  "functional_blocks": {
+    "literature_search": {
+      "description": "Search academic papers, scrape ArXiv, Google Scholar",
+      "file_count": 1,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_swarm.py"
+      ],
+      "similar_repos": [
+        "DATAGEN/src/tools/arxiv_tool.py",
+        "STORM/literature_search.py"
+      ],
+      "total_loc": 130
+    },
+    "data_analysis": {
+      "description": "Statistical analysis, data processing, visualization",
+      "file_count": 2,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/repository_analyzer.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/router_agent.py"
+      ],
+      "similar_repos": [
+        "DATAGEN/src/agents/analysis_agent.py"
+      ],
+      "total_loc": 478
+    },
+    "code_generation": {
+      "description": "Generate code implementations, run experiments",
+      "file_count": 5,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/swarm.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/local.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/docker_exec.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/base.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/base_agent.py"
+      ],
+      "similar_repos": [
+        "DATAGEN/src/agents/code_agent.py",
+        "Paper2Code"
+      ],
+      "total_loc": 547
+    },
+    "multi_agent_coordination": {
+      "description": "Agent orchestration, message passing, workflow management",
+      "file_count": 1,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/autonomous_agents.py"
+      ],
+      "similar_repos": [
+        "DATAGEN/src/core/coordinator.py",
+        "Aetherius/multi_agent.py"
+      ],
+      "total_loc": 503
+    },
+    "long_term_memory": {
+      "description": "Persistent memory, context retention, knowledge graphs",
+      "file_count": 2,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_memory.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/memory.py"
+      ],
+      "similar_repos": [
+        "Aetherius/memory_system.py",
+        "DATAGEN/src/core/memory.py"
+      ],
+      "total_loc": 183
+    },
+    "report_writing": {
+      "description": "Academic paper generation, formatting, citations",
+      "file_count": 3,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/multi_approach_research.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/research_tools.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/researcher_agent.py"
+      ],
+      "similar_repos": [
+        "DATAGEN/src/agents/writer_agent.py",
+        "STORM/paper_generator.py"
+      ],
+      "total_loc": 919
+    },
+    "self_reflection": {
+      "description": "Agent self-assessment, iterative improvement",
+      "file_count": 2,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/self_reflection.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/reviewer_agent.py"
+      ],
+      "similar_repos": [
+        "current/src/self_reflection.py"
+      ],
+      "total_loc": 436
+    },
+    "tool_integration": {
+      "description": "External tool integration (APIs, MCPs, services)",
+      "file_count": 15,
+      "files": [
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/scripts/demo_tools.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_execution_tool.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/task_manager.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/mcp_tools.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/planner_tool.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/demo_tool.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/openai_proxy.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/execution_tool.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/ollama_local.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/__init__.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/example_tool.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/vibe_coding_integration.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/awesome_integrations.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/__init__.py",
+        "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/deepcode_integration.py"
+      ],
+      "similar_repos": [
+        "current/src/integrations/",
+        "DATAGEN/src/tools/"
+      ],
+      "total_loc": 2501
+    }
+  },
+  "files": {
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/agent.py": {
+      "lines": 27,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "os",
+        "sys",
+        "src.agent"
+      ],
+      "complexity": 71,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/scripts/demo_tools.py": {
+      "lines": 53,
+      "functions": [
+        "demo_direct_calls",
+        "demo_via_agent_registry"
+      ],
+      "classes": [],
+      "imports": [
+        "src.tools.example_tool",
+        "src.agent"
+      ],
+      "complexity": 164,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_execution_tool.py": {
+      "lines": 11,
+      "functions": [
+        "test_run_python_code_success",
+        "test_run_python_code_error"
+      ],
+      "classes": [],
+      "imports": [
+        "src.tools.execution_tool"
+      ],
+      "complexity": 37,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_local_sandbox.py": {
+      "lines": 63,
+      "functions": [
+        "test_success_execution",
+        "test_timeout_enforcement",
+        "test_non_zero_exit_code",
+        "test_output_truncation",
+        "test_stderr_capture",
+        "test_working_dir_isolation"
+      ],
+      "classes": [],
+      "imports": [
+        "os",
+        "src.sandbox.local"
+      ],
+      "complexity": 313,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_factory.py": {
+      "lines": 16,
+      "functions": [
+        "test_factory_default_local",
+        "test_factory_docker_resolution"
+      ],
+      "classes": [],
+      "imports": [
+        "src.sandbox.factory",
+        "src.sandbox.local",
+        "src.sandbox.docker_exec"
+      ],
+      "complexity": 58,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_docker_sandbox.py": {
+      "lines": 50,
+      "functions": [
+        "_docker_env_available",
+        "test_missing_docker_daemon",
+        "test_docker_timeout_enforcement",
+        "test_docker_success_execution"
+      ],
+      "classes": [],
+      "imports": [
+        "pytest",
+        "src.sandbox.factory",
+        "src.sandbox.docker_exec",
+        "docker"
+      ],
+      "complexity": 287,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_swarm.py": {
+      "lines": 130,
+      "functions": [
+        "test_message_bus_init",
+        "test_send_message",
+        "test_get_context_for",
+        "test_clear",
+        "test_swarm_init",
+        "test_swarm_execute",
+        "test_swarm_reset",
+        "test_router_agent_init",
+        "test_router_delegation",
+        "test_coder_agent_init",
+        "test_reviewer_agent_init",
+        "test_researcher_agent_init"
+      ],
+      "classes": [
+        "TestMessageBus",
+        "TestSwarmOrchestrator",
+        "TestAgents"
+      ],
+      "imports": [
+        "pytest",
+        "src.swarm",
+        "src.agents.router_agent",
+        "src.agents.coder_agent",
+        "src.agents.reviewer_agent",
+        "src.agents.researcher_agent"
+      ],
+      "complexity": 643,
+      "functional_block": "literature_search"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_mcp.py": {
+      "lines": 397,
+      "functions": [
+        "test_default_values",
+        "test_stdio_config",
+        "test_http_config",
+        "test_mcp_settings_defaults",
+        "test_config_file_exists",
+        "test_config_file_valid_json",
+        "test_config_servers_have_required_fields",
+        "test_import_mcp_client",
+        "test_mcp_tool_dataclass",
+        "test_mcp_server_connection_dataclass",
+        "test_import_mcp_tools",
+        "test_list_mcp_servers_no_manager",
+        "test_list_mcp_tools_no_manager",
+        "test_get_mcp_tool_help_no_manager",
+        "test_mcp_health_check_no_manager",
+        "test_list_mcp_servers_with_mock_manager",
+        "test_list_mcp_tools_with_mock_manager",
+        "test_agent_has_mcp_manager_attribute",
+        "test_agent_has_shutdown_method",
+        "test_agent_has_get_mcp_status_method",
+        "test_agent_mcp_status_when_disabled",
+        "test_load_config_from_valid_file",
+        "test_load_config_from_nonexistent_file",
+        "test_load_config_filters_disabled_servers",
+        "test_tool_wrapper_metadata"
+      ],
+      "classes": [
+        "TestMCPServerConfig",
+        "TestMCPSettings",
+        "TestMCPConfigFile",
+        "TestMCPClientManager",
+        "TestMCPTools",
+        "TestMCPToolsMocked",
+        "TestAgentMCPIntegration",
+        "TestMCPClientManagerConfigLoading",
+        "TestMCPToolWrapper"
+      ],
+      "imports": [
+        "json",
+        "os",
+        "pytest",
+        "pathlib",
+        "unittest.mock",
+        "typing",
+        "src.config",
+        "src.mcp_client",
+        "src.mcp_client",
+        "src.tools.mcp_tools"
+      ],
+      "complexity": 1279,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/conftest.py": {
+      "lines": 13,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "os",
+        "sys"
+      ],
+      "complexity": 54,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_memory.py": {
+      "lines": 50,
+      "functions": [
+        "test_context_window_without_overflow",
+        "test_context_window_with_summary_buffer",
+        "test_loads_legacy_memory_format",
+        "summarizer"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "src.memory"
+      ],
+      "complexity": 333,
+      "functional_block": "long_term_memory"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/tests/test_agent.py": {
+      "lines": 39,
+      "functions": [
+        "mock_agent",
+        "test_agent_initialization",
+        "test_agent_think_act_loop",
+        "test_agent_tools_integration"
+      ],
+      "classes": [],
+      "imports": [
+        "pytest",
+        "unittest.mock",
+        "src.agent",
+        "src.tools.example_tool"
+      ],
+      "complexity": 144,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/acp_protocol.py": {
+      "lines": 384,
+      "functions": [
+        "__init__",
+        "_generate_id",
+        "to_dict",
+        "from_dict",
+        "__init__",
+        "update_context",
+        "get_context",
+        "__init__",
+        "register_agent",
+        "_save_workflow_history",
+        "get_agent_by_role",
+        "get_all_agents_by_role"
+      ],
+      "classes": [
+        "AgentRole",
+        "MessageType",
+        "ACPMessage",
+        "ACPAgent",
+        "ACPCoordinator"
+      ],
+      "imports": [
+        "json",
+        "asyncio",
+        "typing",
+        "datetime",
+        "pathlib",
+        "enum",
+        "hashlib",
+        "src.tools.autonomous_agents",
+        "src.antigravity_gateway"
+      ],
+      "complexity": 1931,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agent.py": {
+      "lines": 510,
+      "functions": [
+        "__init__",
+        "_initialize_mcp",
+        "_load_tools",
+        "_load_context",
+        "_get_tool_descriptions",
+        "_format_context_messages",
+        "_call_gemini",
+        "_extract_tool_call",
+        "summarize_memory",
+        "think",
+        "act",
+        "reflect",
+        "run",
+        "shutdown",
+        "get_mcp_status",
+        "__init__",
+        "generate_content",
+        "__init__",
+        "generate_content"
+      ],
+      "classes": [
+        "GeminiAgent",
+        "_DummyClient",
+        "_Models",
+        "_DummyClientFallback",
+        "_R",
+        "_Models",
+        "_R"
+      ],
+      "imports": [
+        "json",
+        "time",
+        "os",
+        "sys",
+        "asyncio",
+        "inspect",
+        "importlib.util",
+        "pathlib",
+        "typing",
+        "google"
+      ],
+      "complexity": 1992,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/memory.py": {
+      "lines": 133,
+      "functions": [
+        "__init__",
+        "_load_memory",
+        "save_memory",
+        "add_entry",
+        "get_history",
+        "_default_summarizer",
+        "get_context_window",
+        "clear_memory"
+      ],
+      "classes": [
+        "MemoryManager"
+      ],
+      "imports": [
+        "json",
+        "os",
+        "typing",
+        "src.config"
+      ],
+      "complexity": 747,
+      "functional_block": "long_term_memory"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/repository_analyzer.py": {
+      "lines": 348,
+      "functions": [
+        "analyze_current_repository",
+        "__init__",
+        "_init_functional_blocks",
+        "analyze_file",
+        "_classify_functional_block",
+        "analyze_repository",
+        "_generate_report",
+        "identify_integration_opportunities",
+        "export_report"
+      ],
+      "classes": [
+        "FileAnalysis",
+        "FunctionalBlock",
+        "RepositoryAnalyzer"
+      ],
+      "imports": [
+        "os",
+        "ast",
+        "json",
+        "logging",
+        "typing",
+        "pathlib",
+        "dataclasses"
+      ],
+      "complexity": 1906,
+      "functional_block": "data_analysis"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/self_reflection.py": {
+      "lines": 393,
+      "functions": [
+        "get_reflection_engine",
+        "get_review_system",
+        "__init__",
+        "_format_output",
+        "_extract_json",
+        "get_reflection_summary",
+        "__init__",
+        "_format_content",
+        "_extract_json"
+      ],
+      "classes": [
+        "SelfReflectionEngine",
+        "SelfReviewSystem"
+      ],
+      "imports": [
+        "typing",
+        "datetime",
+        "src.antigravity_gateway",
+        "json"
+      ],
+      "complexity": 1296,
+      "functional_block": "self_reflection"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/swarm.py": {
+      "lines": 185,
+      "functions": [
+        "__init__",
+        "send",
+        "get_context_for",
+        "get_all_messages",
+        "clear",
+        "__init__",
+        "execute",
+        "get_message_log",
+        "reset"
+      ],
+      "classes": [
+        "MessageBus",
+        "SwarmOrchestrator"
+      ],
+      "imports": [
+        "typing",
+        "datetime",
+        "src.agents.router_agent",
+        "src.agents.coder_agent",
+        "src.agents.reviewer_agent",
+        "src.agents.researcher_agent"
+      ],
+      "complexity": 719,
+      "functional_block": "code_generation"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/config.py": {
+      "lines": 78,
+      "functions": [],
+      "classes": [
+        "MCPServerConfig",
+        "Settings"
+      ],
+      "imports": [
+        "os",
+        "pathlib",
+        "typing",
+        "pydantic",
+        "pydantic_settings"
+      ],
+      "complexity": 276,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/__init__.py": {
+      "lines": 6,
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "complexity": 8,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/multi_approach_research.py": {
+      "lines": 519,
+      "functions": [
+        "__init__",
+        "__init__",
+        "_format_approaches",
+        "_extract_json"
+      ],
+      "classes": [
+        "ResearchApproach",
+        "MultiApproachAgent",
+        "ResearchAggregator"
+      ],
+      "imports": [
+        "asyncio",
+        "typing",
+        "datetime",
+        "pathlib",
+        "json",
+        "src.acp_protocol",
+        "src.antigravity_gateway",
+        "src.self_reflection"
+      ],
+      "complexity": 1659,
+      "functional_block": "report_writing"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/mcp_client.py": {
+      "lines": 545,
+      "functions": [
+        "get_prefixed_name",
+        "__init__",
+        "_load_server_configs",
+        "get_all_tools",
+        "get_all_tools_as_callables",
+        "_create_tool_wrapper",
+        "get_tool_descriptions",
+        "get_status",
+        "__init__",
+        "_get_loop",
+        "initialize",
+        "get_all_tools_as_callables",
+        "get_tool_descriptions",
+        "shutdown",
+        "get_status",
+        "make_sync_wrapper",
+        "sync_wrapper"
+      ],
+      "classes": [
+        "MCPTool",
+        "MCPServerConnection",
+        "MCPClientManager",
+        "MCPClientManagerSync"
+      ],
+      "imports": [
+        "asyncio",
+        "json",
+        "os",
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "src.config",
+        "mcp",
+        "mcp.client.stdio",
+        "mcp"
+      ],
+      "complexity": 2193,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/swarm_demo.py": {
+      "lines": 95,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "src.swarm"
+      ],
+      "complexity": 465,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/antigravity_gateway.py": {
+      "lines": 368,
+      "functions": [
+        "get_gateway",
+        "generate_with_antigravity",
+        "__init__",
+        "_get_cache_key",
+        "_check_cache",
+        "_save_cache",
+        "_check_rate_limit",
+        "_record_request",
+        "select_model",
+        "generate",
+        "_call_gemini",
+        "_call_claude",
+        "_call_openai",
+        "_call_openai_compatible",
+        "get_stats",
+        "clear_cache"
+      ],
+      "classes": [
+        "ModelTier",
+        "AntigravityAPIGateway"
+      ],
+      "imports": [
+        "os",
+        "asyncio",
+        "hashlib",
+        "json",
+        "time",
+        "typing",
+        "datetime",
+        "pathlib",
+        "enum",
+        "requests"
+      ],
+      "complexity": 1556,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/factory.py": {
+      "lines": 31,
+      "functions": [
+        "get_sandbox"
+      ],
+      "classes": [],
+      "imports": [
+        "os",
+        "base",
+        "local",
+        "docker_exec",
+        "e2b_exec"
+      ],
+      "complexity": 70,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/local.py": {
+      "lines": 90,
+      "functions": [
+        "_truncate_output",
+        "execute"
+      ],
+      "classes": [
+        "LocalSandbox"
+      ],
+      "imports": [
+        "os",
+        "sys",
+        "time",
+        "tempfile",
+        "subprocess",
+        "typing",
+        "base"
+      ],
+      "complexity": 418,
+      "functional_block": "code_generation"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/docker_exec.py": {
+      "lines": 135,
+      "functions": [
+        "_docker_available",
+        "execute"
+      ],
+      "classes": [
+        "DockerSandbox"
+      ],
+      "imports": [
+        "os",
+        "tempfile",
+        "time",
+        "typing",
+        "base",
+        "docker",
+        "docker"
+      ],
+      "complexity": 518,
+      "functional_block": "code_generation"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/__init__.py": {
+      "lines": 10,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "base",
+        "factory",
+        "local"
+      ],
+      "complexity": 17,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/sandbox/base.py": {
+      "lines": 27,
+      "functions": [
+        "execute"
+      ],
+      "classes": [
+        "ExecutionResult",
+        "CodeSandbox"
+      ],
+      "imports": [
+        "dataclasses",
+        "typing"
+      ],
+      "complexity": 67,
+      "functional_block": "code_generation"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/task_manager.py": {
+      "lines": 457,
+      "functions": [
+        "create_parallel_task_group",
+        "import_ai_tasks_from_mcp",
+        "schedule_research_tasks",
+        "get_task_manager",
+        "__init__",
+        "to_dict",
+        "__init__",
+        "add_task",
+        "_can_execute",
+        "_execute_task",
+        "execute_parallel",
+        "get_execution_summary",
+        "get_task_status",
+        "cancel_task",
+        "clear_completed",
+        "save_state",
+        "shutdown"
+      ],
+      "classes": [
+        "TaskStatus",
+        "TaskPriority",
+        "Task",
+        "TaskManager"
+      ],
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "json",
+        "asyncio",
+        "concurrent.futures",
+        "enum"
+      ],
+      "complexity": 1782,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/research_tools.py": {
+      "lines": 356,
+      "functions": [
+        "analyze_paper_structure",
+        "cross_analyze_approaches",
+        "negative_analysis",
+        "code_quality_assessment",
+        "save_research_artifact",
+        "extract_citations",
+        "generate_paper_outline",
+        "compare_code_implementations"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "typing",
+        "json",
+        "datetime"
+      ],
+      "complexity": 1408,
+      "functional_block": "report_writing"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/mcp_tools.py": {
+      "lines": 268,
+      "functions": [
+        "list_mcp_servers",
+        "list_mcp_tools",
+        "get_mcp_tool_help",
+        "mcp_health_check",
+        "_set_mcp_manager",
+        "_get_mcp_manager"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "typing",
+        "src.config",
+        "src.mcp_client"
+      ],
+      "complexity": 860,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/planner_tool.py": {
+      "lines": 502,
+      "functions": [
+        "create_research_plan",
+        "update_task_status",
+        "get_plan_progress",
+        "calculate_expected_progress",
+        "add_task_to_plan",
+        "save_plan_artifact",
+        "load_latest_plan",
+        "generate_daily_tasks"
+      ],
+      "classes": [],
+      "imports": [
+        "typing",
+        "datetime",
+        "pathlib",
+        "json"
+      ],
+      "complexity": 1827,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/demo_tool.py": {
+      "lines": 35,
+      "functions": [
+        "greet_user",
+        "reverse_text"
+      ],
+      "classes": [],
+      "imports": [],
+      "complexity": 37,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/openai_proxy.py": {
+      "lines": 73,
+      "functions": [
+        "call_openai_chat"
+      ],
+      "classes": [],
+      "imports": [
+        "typing",
+        "requests",
+        "src.config"
+      ],
+      "complexity": 283,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/execution_tool.py": {
+      "lines": 36,
+      "functions": [
+        "run_python_code"
+      ],
+      "classes": [],
+      "imports": [
+        "typing",
+        "os",
+        "src.sandbox.factory"
+      ],
+      "complexity": 140,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/ollama_local.py": {
+      "lines": 50,
+      "functions": [
+        "call_local_ollama"
+      ],
+      "classes": [],
+      "imports": [
+        "json",
+        "typing",
+        "requests"
+      ],
+      "complexity": 180,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/autonomous_agents.py": {
+      "lines": 503,
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "complexity": 0,
+      "functional_block": "multi_agent_coordination"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/__init__.py": {
+      "lines": 24,
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "complexity": 3,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/tools/example_tool.py": {
+      "lines": 155,
+      "functions": [
+        "web_search",
+        "get_stock_price",
+        "calculate_math",
+        "get_weather",
+        "send_email",
+        "_eval"
+      ],
+      "classes": [],
+      "imports": [
+        "requests",
+        "ast",
+        "operator"
+      ],
+      "complexity": 484,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/vibe_coding_integration.py": {
+      "lines": 259,
+      "functions": [
+        "__init__",
+        "__init__"
+      ],
+      "classes": [
+        "VibeCodingEngine",
+        "Context7Integration"
+      ],
+      "imports": [
+        "os",
+        "json",
+        "asyncio",
+        "typing",
+        "pathlib"
+      ],
+      "complexity": 881,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/awesome_integrations.py": {
+      "lines": 326,
+      "functions": [
+        "__init__",
+        "_load_installed",
+        "get_recommendations",
+        "get_installation_script",
+        "update_mcp_config",
+        "__init__"
+      ],
+      "classes": [
+        "MCPRegistry",
+        "AIAgentOrchestrator"
+      ],
+      "imports": [
+        "os",
+        "json",
+        "typing",
+        "pathlib"
+      ],
+      "complexity": 998,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/__init__.py": {
+      "lines": 23,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "deepcode_integration",
+        "vibe_coding_integration",
+        "awesome_integrations"
+      ],
+      "complexity": 25,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/integrations/deepcode_integration.py": {
+      "lines": 229,
+      "functions": [
+        "__init__"
+      ],
+      "classes": [
+        "DeepCodeAgent"
+      ],
+      "imports": [
+        "os",
+        "json",
+        "asyncio",
+        "typing",
+        "pathlib"
+      ],
+      "complexity": 530,
+      "functional_block": "tool_integration"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/reviewer_agent.py": {
+      "lines": 43,
+      "functions": [
+        "__init__"
+      ],
+      "classes": [
+        "ReviewerAgent"
+      ],
+      "imports": [
+        "src.agents.base_agent"
+      ],
+      "complexity": 29,
+      "functional_block": "self_reflection"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/coder_agent.py": {
+      "lines": 37,
+      "functions": [
+        "__init__"
+      ],
+      "classes": [
+        "CoderAgent"
+      ],
+      "imports": [
+        "src.agents.base_agent"
+      ],
+      "complexity": 29,
+      "functional_block": "unknown"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/router_agent.py": {
+      "lines": 130,
+      "functions": [
+        "__init__",
+        "analyze_and_delegate",
+        "_simple_delegate",
+        "synthesize_results"
+      ],
+      "classes": [
+        "RouterAgent"
+      ],
+      "imports": [
+        "typing",
+        "src.agents.base_agent"
+      ],
+      "complexity": 454,
+      "functional_block": "data_analysis"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/researcher_agent.py": {
+      "lines": 44,
+      "functions": [
+        "__init__"
+      ],
+      "classes": [
+        "ResearcherAgent"
+      ],
+      "imports": [
+        "src.agents.base_agent"
+      ],
+      "complexity": 29,
+      "functional_block": "report_writing"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/base_agent.py": {
+      "lines": 110,
+      "functions": [
+        "__init__",
+        "execute",
+        "reset_history",
+        "__init__",
+        "generate_content",
+        "__init__",
+        "generate_content"
+      ],
+      "classes": [
+        "BaseAgent",
+        "_DummyClient",
+        "_Models",
+        "_DummyClient",
+        "_R",
+        "_Models",
+        "_R"
+      ],
+      "imports": [
+        "os",
+        "typing",
+        "google",
+        "src.config"
+      ],
+      "complexity": 388,
+      "functional_block": "code_generation"
+    },
+    "/home/runner/work/antigravity-workspace-template/antigravity-workspace-template/src/agents/__init__.py": {
+      "lines": 9,
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "complexity": 3,
+      "functional_block": "unknown"
+    }
+  }
+}
