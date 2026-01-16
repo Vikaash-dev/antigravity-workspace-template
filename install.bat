@@ -1,6 +1,28 @@
 @echo off
+REM ============================================================================
 REM Antigravity Workspace Template Installer for Windows
-REM This script sets up the development environment automatically
+REM ============================================================================
+REM
+REM PURPOSE:
+REM   Automated setup script that prepares your development environment for
+REM   running autonomous AI agents with Google Gemini integration on Windows.
+REM
+REM WHAT THIS SCRIPT DOES:
+REM   1. Validates system requirements (Python 3.8+, Git)
+REM   2. Creates a Python virtual environment
+REM   3. Installs all required dependencies from requirements.txt
+REM   4. Sets up configuration files (.env, artifacts/ directory)
+REM   5. Provides next steps for running the agent
+REM
+REM USAGE:
+REM   install.bat
+REM
+REM AFTER INSTALLATION:
+REM   1. Configure API keys in .env file (notepad .env)
+REM   2. Virtual environment is auto-activated
+REM   3. Run the agent: python src/agent.py
+REM
+REM ============================================================================
 
 setlocal enabledelayedexpansion
 
