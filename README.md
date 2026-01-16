@@ -132,6 +132,7 @@ This is **not** another LangChain wrapper. It's a minimal, transparent workspace
 **Full documentation available in `/docs/en/`:**
 
 - **[Quick Start](docs/en/QUICK_START.md)** — Installation & deployment
+- **[Scripts](docs/en/SCRIPTS.md)** — Script purposes and usage guide
 - **[Philosophy](docs/en/PHILOSOPHY.md)** — Core concepts & architecture
 - **[Zero-Config](docs/en/ZERO_CONFIG.md)** — Auto tool & context loading
 - **[MCP Integration](docs/en/MCP_INTEGRATION.md)** — External tool connectivity
