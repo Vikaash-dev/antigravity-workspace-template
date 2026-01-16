@@ -187,8 +187,8 @@ if [ "$NODE_AVAILABLE" = true ]; then
     npm install -g @modelcontextprotocol/server-github 2>/dev/null || echo "✅ GitHub server available via npx"
     
     # Install Tavily Search MCP for AI-powered research
-    echo "🔍 Installing @tavily/mcp-server (AI-powered search)..."
-    npm install -g @tavily/mcp-server 2>/dev/null || echo "✅ Tavily server available via npx"
+    echo "🔍 Installing tavily-mcp (AI-powered search)..."
+    npm install -g tavily-mcp 2>/dev/null || echo "✅ Tavily server available via npx"
     
     # Install Google Search MCP for comprehensive research
     echo "🌐 Installing @modelcontextprotocol/server-google-search..."
